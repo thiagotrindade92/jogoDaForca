@@ -1,0 +1,458 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----------------------- */
+
+body {
+  overflow: hidden;
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: url("../assets/img/bg.jpg");
+  background-size: cover;
+}
+
+svg {
+  display: flex;
+  width: 100%;
+  height: 25vh;
+}
+
+path {
+  fill: transparent;
+}
+
+text {
+  text-align: center;
+  font-weight: 1000;
+  font-size: 280%;
+  text-shadow: var(--text-shadow);
+  
+}
+
+header {
+  padding: 20px 0;
+}
+
+.textoInicial p {
+  font-size: 36px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+ /* background-color: rgba(109, 78, 10, 0.5); */
+  padding: 0 40px;
+}
+
+.iconsRedeSociais {
+  position: absolute;
+  top: 576px;
+}
+
+.git {
+  position: relative;
+  left: 477px;
+}
+
+.linkedin {
+  position: relative;
+  left: 817px;
+}
+
+.copyright {
+  position: relative;
+  width: 100%;
+  padding: 14px 0px;
+}
+
+ /*
+.imgFooter {
+  position: absolute;
+}
+*/
+
+.selectFont {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.box {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+  text-align: center;
+}
+/*
+.box h1 {
+  font-size: 48px;
+}
+*/
+.box p {
+  font-size: 36px;
+  margin: 20px 0;  
+}
+/*
+.box p:hover {
+  color: darkcyan;
+  text-decoration: underline;
+}
+*/
+.logo {
+  position: absolute;
+  top: 42px;
+  right: 966px;
+}
+
+.defaultBtn {
+  display: flex;
+  width: 20vw;
+  height: 6vh;
+  font-size: 115%;
+  border-radius: 20px;
+  border: 1px black solid;
+  margin: 2.2rem auto;
+  font-weight: 600;
+  transition: 500ms;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: goldenrod;
+
+}
+
+.defaultBtn:hover {
+  background-color: darkcyan;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.sectionMenu {
+  width: 40%;
+  min-width: fit-content;
+  height: 50vh;
+  margin: 23px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: rgba(109, 78, 10, 0.5);
+}
+
+/* Estilizando a página do Game */
+
+.tela {
+  width: 100%;
+  margin: 2rem auto;
+  flex-shrink: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas {
+  display: flex;
+  width: 50%;
+  height: 40vh;
+  flex-shrink: 2;
+  max-width: 1200px;
+  max-height: 800px;
+  min-width: 280px;
+  min-height: 250px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: rgba(109, 78, 10, 0.9);
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+#btnTeclado {
+  margin: 0 auto;
+  width: 45%;
+  display: flex;
+  font-size: 140%;
+  justify-content: space-between;
+  align-items: center;
+}
+/*
+#dica {
+  color: darkred;
+  font-weight: 600;
+  text-shadow: var(--text-shadow);
+}
+*/
+#inicioBtn {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-shadow: var(--text-shadow);
+
+}
+
+#teclado {
+  font-size: 150%;
+  color: aliceblue;
+}
+
+#inicioBtn:hover {
+  color: goldenrod;
+  cursor: pointer;
+  animation: jello;
+  animation-duration: 1s;
+}
+
+
+#teclado:hover {
+  color: goldenrod;
+  cursor: pointer;
+  animation: jello;
+  animation-delay: 6s;
+  animation-duration: 1s;
+}
+
+#teclado::after {
+  display: none;
+  position: absolute;
+  top: -5px;
+  padding: 5px;
+  border-radius: 20px;
+  padding: 0.4rem;
+  left: calc(100% + 2px);
+  width: 10vw;
+  content: "Para jogar, pressione uma tecla ou clique no ícone para chamar o teclado virtual";
+  font-size: 45%;
+  font-weight: 600;
+  white-space: wrap;
+  background-color: darkslateblue;
+  color: aliceblue;
+}
+
+#teclado:hover::after {
+  display: block;
+}
+
+#tabuleiro {
+  width: 50%;
+  margin: 2rem auto;
+  display: flex;
+  flex-shrink: 2;
+  justify-content: center;
+}
+
+input {
+  display: flex;
+  flex-shrink: 3;
+  width: 4rem;
+  color: darkred;
+  text-shadow: var(--text-shadow);
+  border: none;
+  outline: none;
+  border-bottom: 5px solid black;
+  margin: 2px;
+  font-size: 200%;
+  font-weight: 800;
+  text-align: center;
+  animation: backInDown;
+  animation-duration: 2.4s;
+}
+
+.input {
+  visibility: hidden;
+}
+
+#letrasErradas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+}
+
+#letrasErradas p {
+  font-size: 135%;
+  font-weight: 600;
+  margin: 0.4rem;
+  margin-top: 1.8rem;
+  width: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  border: 4px outset goldenrod;
+  animation: bounceInDown;
+  animation-duration: 1s;
+  transition: 500ms;
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.5);
+  background-color: rgba(233, 229, 0, 0.9);
+}
+
+#placeholder {
+  visibility: hidden;
+}
+
+#janelaMmensagem {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-shrink: 3;
+  bottom: 80%;
+}
+
+#venceuPerdeu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  width: 40%;
+  height: 60vh;
+  border-radius: 10px;
+  animation: tada;
+  animation-duration: 1.5s;
+  transition: 2s;
+}
+
+#msg {
+  order: -1;
+  flex: 1 0 100%;
+}
+
+.palavraRrevelada {
+  font-size: 50%;
+  color: darkred;
+}
+
+.perdeu {
+  background: url(../img/perdeu.jpg) 50% 50%;
+  background-size: cover;
+}
+
+.venceu {
+  background: url(../img/venceu.jpg) 50% 50%;
+  background-size: cover;
+}
+
+.modalBtns {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  padding: 1rem;
+  font-weight: 600;
+  line-height: 0;
+  background-color: gold;
+  transition: 500ms;
+}
+
+.modalBtns:hover {
+  cursor: pointer;
+  background-color: darkslateblue;
+  color: aliceblue;
+}
+
+#keyboard {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  position: sticky;
+  top: 100vh;
+}
+
+.simpleKeyboard {
+  display: none;
+  width: 50%;
+  margin-top: -4rem;
+  text-align: center;
+  transition: 700ms;
+  animation-duration: 1.4s;
+}
+/*
+.flexContainer {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+*/
+.copyright1 {
+  padding: 59px 0;
+}
+
+/* Estilizando a página do Adiciona Palavra */
+
+#adicionaPalavra {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  padding: 15px;
+}
+
+#campoAdiciona {
+  color: blueviolet;
+  text-align: left;
+  font-size: 120%;
+  width: 50%;
+  height: 6vh;
+  border: 2px solid black;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-left: 16px;
+}
+
+#add {
+  height: 6vh;
+  width: 4rem;
+  border-left: 5px dashed black;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: -5px;
+  background-color: darkgoldenrod;
+  color: black;
+}
+
+#addTip,
+#addWord {
+  display: none;
+  position: absolute;
+  top: 35%;
+  margin: 1.2rem auto;
+  object-fit: fill;
+  padding: 0.4rem;
+  border-radius: 20px;
+  font-size: 100%;
+  font-weight: 600;
+  background-color: rgb(212, 33, 33);
+  color: aliceblue;
+  text-align: center;
+  animation-duration: 1s;
+  width: 30%;
+}
+
+#add:hover {
+  cursor: pointer;
+  background-color: darkcyan;
+  color: white;
+  transition: 300ms;
+}
+
+.flexContainer {
+  display: flex;
+  width: 70%;
+  margin: 115px auto;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.copyright2 {
+  position: absolute;
+  left: 543px;
+  top: 585px;
+}
