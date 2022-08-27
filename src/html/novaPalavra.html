@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da forca - Alura One</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body class="selectFont">
+  <header>
+    <div class="box">
+          <div class="logo">
+            <a href="/index.html"><img src="../assets/img/logoDourada.png" alt="Logo Alura"></a>
+          </div>
+          
+          <div class="tituloPrincipal">
+            <h1>A Batalha de Troia</h1>
+            <p>Jogo da forca</p>
+          </div>
+               
+    </div>
+  </header> 
+  <main class="mainAnimation">
+    <section>
+      <div>
+        <form id="adiciona-palavra">
+          <input
+              id="campo-adiciona"
+              name="palavra"
+              type="text"
+              autocomplete="off"
+              placeholder="Digite palavra com no máximo 8 letras..."
+              pattern="^[A-ZÇa-zç]{3,8}"
+              required
+          />
+          <button  id="add" name="palavra" type="submit">OK</button>
+          <span id="addTip">Sua palavra foi adicionada! Agora escreva uma dica para ela</span>
+          <span id="addWord"> Sua dica foi adicionada! Você pode adicionar outras palavras ou começar o jogo agora!</span>
+        </form>
+      </div>
+    </section>
+    <section>
+      <div class="flex-container">
+        <a href="./jogo.html" id="newGame" class="defaultBtn"> Novo Jogo </a>
+        <a href="/index.html" class="defaultBtn"> Início </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="copyright2">
+      <p> &copy; Copyright Thiago Trindade - Alura</p>
+    </div>
+    <div class="iconsRedeSociais">
+      <a class="git" href="https://github.com/thiagotrindade92"><img src="../assets/icons/github.png" width="34px" height="34px" alt=""></a>
+      <a class="linkedin" href="https://www.linkedin.com/in/thiago-trindade-351892208"><img src="../assets/icons/linkedin.png" width="33px" height="33px" alt=""></a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js" integrity="sha512-GQ5/eIhs41UXpG6fGo4xQBpwSEj9RrBvMuKyE2h/2vw3a9x85T1Bt0JglOUVJJLeyIUl/S/kCdDXlE/n7zCjIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../js/animation.js"></script>
+  <script src="../js/novoJogo.js"></script>
+</body>
+</html>

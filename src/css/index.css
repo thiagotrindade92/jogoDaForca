@@ -64,9 +64,10 @@ footer {
 }
 
 .copyright {
-  position: relative;
+  position: absolute;
   width: 100%;
-  padding: 14px 0px;
+  margin: rem auto;
+  margin: 36.6rem auto;
 }
 
  /*
@@ -81,16 +82,30 @@ footer {
 
 
 .box {
-  position: relative;
-  width: 940px;
-  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  margin: 1rem 0;
   text-align: center;
 }
+
+.tituloPrincipal {
+  font-size: 2.4rem;
+  font-weight: bolder;
+  color: darkgoldenrod;
+  margin: 2.4rem;
+  padding: 1.5rem;
+}
+
+.tituloPrincipal p {
+  font-size: 1.5rem;
+  margin: 1.6rem;
+}
+
 /*
 .box h1 {
   font-size: 48px;
 }
-*/
+
 .box p {
   font-size: 36px;
   margin: 20px 0;  
@@ -102,9 +117,10 @@ footer {
 }
 */
 .logo {
-  position: absolute;
-  top: 42px;
-  right: 966px;
+    position: absolute;
+    top: 1rem;
+    /* right: 74rem; */
+    left: 3rem;
 }
 
 .defaultBtn {
@@ -124,6 +140,7 @@ footer {
   justify-content: center;
   color: black;
   background-color: goldenrod;
+  overflow: none;
 
 }
 
@@ -135,9 +152,12 @@ footer {
 
 .sectionMenu {
   width: 40%;
+  position: absolute;
   min-width: fit-content;
   height: 50vh;
-  margin: 23px auto;
+  margin: 12rem auto;
+  left: 26rem;
+  /* right: 25rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -179,13 +199,13 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-/*
+
 #dica {
-  color: darkred;
+  color: darkgoldenrod;
   font-weight: 600;
   text-shadow: var(--text-shadow);
 }
-*/
+
 #inicioBtn {
   text-decoration: none;
   color: black;
@@ -238,7 +258,7 @@ footer {
 
 #tabuleiro {
   width: 50%;
-  margin: 2rem auto;
+  margin: 1.1rem auto;
   display: flex;
   flex-shrink: 2;
   justify-content: center;
@@ -252,7 +272,7 @@ input {
   text-shadow: var(--text-shadow);
   border: none;
   outline: none;
-  border-bottom: 5px solid black;
+  border-bottom: 3px solid black;
   margin: 2px;
   font-size: 200%;
   font-weight: 800;
@@ -265,7 +285,7 @@ input {
   visibility: hidden;
 }
 
-#letrasErradas {
+#letras-erradas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -273,7 +293,7 @@ input {
   max-width: 80%;
 }
 
-#letrasErradas p {
+#letras-erradas p {
   font-size: 135%;
   font-weight: 600;
   margin: 0.4rem;
@@ -281,19 +301,19 @@ input {
   width: 2rem;
   text-align: center;
   border-radius: 50%;
-  border: 4px outset goldenrod;
+  border: 4px outset darkgoldenrod;
   animation: bounceInDown;
   animation-duration: 1s;
   transition: 500ms;
   box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.5);
-  background-color: rgba(233, 229, 0, 0.9);
+  background-color: rgba(138, 138, 133, 0.9);
 }
 
 #placeholder {
   visibility: hidden;
 }
 
-#janelaMmensagem {
+#janela-mensagem {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -302,7 +322,7 @@ input {
   bottom: 80%;
 }
 
-#venceuPerdeu {
+#venceu-perdeu {
   position: absolute;
   display: none;
   flex-direction: column;
@@ -321,18 +341,18 @@ input {
   flex: 1 0 100%;
 }
 
-.palavraRrevelada {
+.palavra-revelada {
   font-size: 50%;
   color: darkred;
 }
 
 .perdeu {
-  background: url(../img/perdeu.jpg) 50% 50%;
+  background: url(../assets/img/perdeu.jpg) 50% 50%;
   background-size: cover;
 }
 
 .venceu {
-  background: url(../img/venceu.jpg) 50% 50%;
+  background: url("") 50% 50%;
   background-size: cover;
 }
 
@@ -361,7 +381,7 @@ input {
   top: 100vh;
 }
 
-.simpleKeyboard {
+.simple-keyboard {
   display: none;
   width: 50%;
   margin-top: -4rem;
@@ -369,32 +389,47 @@ input {
   transition: 700ms;
   animation-duration: 1.4s;
 }
-/*
-.flexContainer {
+
+/* .flex-container {
   display: flex;
   width: 70%;
   margin: 0 auto;
   justify-content: space-around;
   align-items: center;
   text-align: center;
+} */
+
+.flex-container {
+  display: flex;
+  position: absolute;
+  width: 70%;
+  /* margin: 96rem; */
+  height: 1rem;
+  padding: 1;
+  top: 27rem;
+  left: 11rem;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
-*/
+
 .copyright1 {
-  padding: 59px 0;
+  padding: 31px 0;
 }
 
 /* Estilizando a página do Adiciona Palavra */
 
-#adicionaPalavra {
+#adiciona-palavra {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 40%;
-  padding: 15px;
+  /* padding: 36px; */
+  margin: 17rem;
 }
 
-#campoAdiciona {
+#campo-adiciona {
   color: blueviolet;
   text-align: left;
   font-size: 120%;
@@ -442,14 +477,17 @@ input {
   transition: 300ms;
 }
 
-.flexContainer {
+/* .flexContainer {
   display: flex;
+  position: absolute;
   width: 70%;
-  margin: 115px auto;
+  margin: 1rem 13.1rem;
+  padding: 0 2rem;
+  top: 21rem;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-}
+} */
 
 .copyright2 {
   position: absolute;
